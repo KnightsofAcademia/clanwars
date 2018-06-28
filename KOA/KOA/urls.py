@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from clanwars import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('status',views.getStatus, name='getStatus'),
+    path('user',views.getUser, name='getUser' ),
 ]
